@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tartaletas Dulces – NuevaMiga</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff9f0;
+      color: #4a4a4a;
+      margin: 40px;
+      max-width: 700px;
+    }
+    h1 {
+      color: #a35400;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .producto {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px rgba(163, 84, 0, 0.25);
+      padding: 25px 30px;
+      line-height: 1.6;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #a35400;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #7b3f00;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tartaletas Dulces – NuevaMiga</h1>
+
+  <div class="producto">
+    <p id="desc">
+      Nuestras tartaletas dulces son una fusión entre el sabor tradicional y la innovación sostenible. Están elaboradas a partir de mermas cuidadosamente seleccionadas de pan y pastel, que son transformadas en una masa suave y crocante, sin perder su valor nutritivo.
+      <br /><br />
+      El relleno, cremoso y ligeramente dulce, se prepara con una mezcla de mermas licuadas, leche o queso crema, y toques de fruta natural o canela, según la variedad. Todo esto se hornea hasta lograr una textura equilibrada: una base firme y dorada, con un interior suave y delicado al paladar.
+      <br /><br />
+      Pensadas para personas de todas las edades, incluidas aquellas con necesidades alimentarias especiales, nuestras tartaletas tienen un enfoque inclusivo. Su preparación es casera, su presentación es limpia y atractiva, y su empaque es práctico, ecológico y fácil de transportar.
+      <br /><br />
+      ¿Qué las hace únicas?
+      <br />
+      Son productos sostenibles: reducen el desperdicio de alimentos.
+      <br />
+      Son accesibles y fáciles de consumir.
+      <br />
+      Son visualmente atractivas, sabrosas y de preparación sencilla.
+      <br />
+      Ofrecen un sabor casero con un propósito consciente.
+      <br /><br />
+      Perfectas para compartir en familia, en loncheras escolares o como un detalle dulce en cualquier momento del día.
+    </p>
+    <button onclick="leerTexto('desc')">🔊 Escuchar descripción</button>
+  </div>
+
+  <script>
+    function leerTexto(id) {
+      const texto = document.getElementById(id).innerText;
+      const utterance = new SpeechSynthesisUtterance(texto);
+      utterance.lang = 'es-PE';
+      window.speechSynthesis.speak(utterance);
+    }
+  </script>
+
+</body>
+</html>
